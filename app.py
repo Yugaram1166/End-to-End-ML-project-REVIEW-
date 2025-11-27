@@ -3,10 +3,14 @@ import numpy as np
 import pandas as pd
 import joblib
 import os
+import pickle
+import os
 
-# Load model from current directory
 model_path = os.path.join(os.getcwd(), "diabetes_random_forest_model.pkl")
-model = joblib.load(model_path)
+
+with open(model_path, "rb") as f:
+    model = pickle.load(f)
+
 
 st.title("🩺 Diabetes Prediction App")
 st.write("Enter patient details to predict diabetes risk.")
@@ -51,3 +55,4 @@ if st.button("Predict"):
     prediction = model.predict(input_aligned)[0]
     result = "✔ Diabetes Detected" if prediction == 1 else "❌ No Diabetes"
     st.success(result)
+
