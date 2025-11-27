@@ -1,8 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import joblib
-import os
 import pickle
 import os
 
@@ -55,4 +53,5 @@ if st.button("Predict"):
     prediction = model.predict(input_aligned)[0]
     result = "✔ Diabetes Detected" if prediction == 1 else "❌ No Diabetes"
     st.success(result)
+
 
