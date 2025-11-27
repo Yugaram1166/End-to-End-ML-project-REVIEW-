@@ -1,0 +1,10 @@
+age
+physical_activity_minutes_per_week
+family_history_diabetes
+glucose_fasting
+glucose_postprandial
+hba1c
+diabetes_risk_score
+diabetes_stage_No Diabetes
+diabetes_stage_Pre-Diabetes
+diabetes_stage_Type 2
